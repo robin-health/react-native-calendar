@@ -350,11 +350,9 @@ export default class Calendar extends Component {
               {this.props.prevButtonText}
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.title} onPress={() => this.props.onTitlePress && this.props.onTitlePress()}>
-            <Text style={[styles.titleText, this.props.customStyle.title]}>
-              {localizedMonth} {this.state.currentMoment.year()}
-            </Text>
-          </TouchableOpacity>
+          <Text style={[styles.titleText, this.props.customStyle.title]}>
+            {localizedMonth} {this.state.currentMoment.year()}
+          </Text>
           <TouchableOpacity
             style={[styles.controlButton, this.props.customStyle.controlButton]}
             onPress={this.onNext}

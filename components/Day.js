@@ -114,15 +114,11 @@ export default class Day extends Component {
         </TouchableWithoutFeedback>
       )
       : (
-        <TouchableOpacity
-          onPress={this.props.onPress}
-          onLongPress={this.props.onLongPress}
-        >
-          <View style={this.dayButtonStyle(isWeekend, isSelected, isToday, event)}>
-            <View style={this.dayCircleStyle(isWeekend, isSelected, isToday, event)}>
-              <Text style={this.dayTextStyle(isWeekend, isSelected, isToday, event)}>{caption}</Text>
-            </View>
-            {showEventIndicators &&
+        <View style={this.dayButtonStyle(isWeekend, isSelected, isToday, event)}>
+          <View style={this.dayCircleStyle(isWeekend, isSelected, isToday, event)}>
+            <Text style={this.dayTextStyle(isWeekend, isSelected, isToday, event)}>{caption}</Text>
+          </View>
+          {showEventIndicators &&
             <View style={[
               styles.eventIndicatorFiller,
               customStyle.eventIndicatorFiller,
@@ -130,9 +126,8 @@ export default class Day extends Component {
               event && customStyle.eventIndicator,
               event && event.eventIndicator]}
             />
-            }
-          </View>
-        </TouchableOpacity>
+          }
+        </View>
       );
   }
 }
