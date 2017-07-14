@@ -350,7 +350,7 @@ export default class Calendar extends Component {
               {this.props.prevButtonText}
             </Text>
           </TouchableOpacity>
-          <Text style={[styles.titleText, this.props.customStyle.title]}>
+          <Text style={[styles.title, styles.titleText, this.props.customStyle.title]}>
             {localizedMonth} {this.state.currentMoment.year()}
           </Text>
           <TouchableOpacity
